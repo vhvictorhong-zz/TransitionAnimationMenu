@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="7k7-Y6-kM6">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--Title-->
+        <scene sceneID="Pgc-hb-5PG">
+            <objects>
+                <viewController id="fa0-SJ-3xa" customClass="ViewController" customModule="TransitionAnimationMenu" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="BYp-A9-aqt"/>
+                        <viewControllerLayoutGuide type="bottom" id="WaB-5R-Ggl"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="NPk-yQ-Xty">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Title" id="GbG-jO-0ck">
+                        <barButtonItem key="leftBarButtonItem" systemItem="search" id="BOI-gO-BCt"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="Kx9-RS-EpV">
+                            <connections>
+                                <segue destination="ZrM-dh-rzv" kind="presentation" modalPresentationStyle="overFullScreen" id="ZSf-o0-NAf"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oVG-WQ-IHv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1632" y="315"/>
+        </scene>
+        <!--Menu View Controller-->
+        <scene sceneID="9wA-Y9-APf">
+            <objects>
+                <viewController id="ZrM-dh-rzv" customClass="MenuViewController" customModule="TransitionAnimationMenu" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="bqO-iq-wAK"/>
+                        <viewControllerLayoutGuide type="bottom" id="ue0-Fv-aUt"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="B2S-KG-oQy">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Text" translatesAutoresizingMaskIntoConstraints="NO" id="QBe-fx-6a6">
+                                <rect key="frame" x="120" y="120" width="100" height="100"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Photo" translatesAutoresizingMaskIntoConstraints="NO" id="EiB-BT-Lqf">
+                                <rect key="frame" x="380" y="120" width="100" height="100"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Quote" translatesAutoresizingMaskIntoConstraints="NO" id="uea-sB-UpH">
+                                <rect key="frame" x="120" y="240" width="100" height="100"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Link" translatesAutoresizingMaskIntoConstraints="NO" id="3RT-kQ-xo9">
+                                <rect key="frame" x="380" y="240" width="100" height="100"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Chat" translatesAutoresizingMaskIntoConstraints="NO" id="19F-TL-erQ">
+                                <rect key="frame" x="120" y="371" width="100" height="100"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Weg-Z1-kia">
+                                <rect key="frame" x="15" y="550" width="570" height="30"/>
+                                <state key="normal" title="Cancel"/>
+                                <connections>
+                                    <segue destination="vqN-zM-RXp" kind="unwind" unwindAction="unwindToViewController:" id="rj7-Hr-jwn"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Audio" translatesAutoresizingMaskIntoConstraints="NO" id="7Ha-wD-QaB">
+                                <rect key="frame" x="380" y="371" width="100" height="100"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.49803921579999999" green="0.49803921579999999" blue="0.49803921579999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="EiB-BT-Lqf" firstAttribute="top" secondItem="bqO-iq-wAK" secondAttribute="bottom" constant="100" id="0EX-Br-Tvp"/>
+                            <constraint firstItem="uea-sB-UpH" firstAttribute="width" secondItem="QBe-fx-6a6" secondAttribute="width" id="3w2-Sd-bjn"/>
+                            <constraint firstItem="19F-TL-erQ" firstAttribute="top" secondItem="uea-sB-UpH" secondAttribute="bottom" constant="31" id="4tl-3I-J73"/>
+                            <constraint firstItem="EiB-BT-Lqf" firstAttribute="height" secondItem="QBe-fx-6a6" secondAttribute="height" id="6T0-wK-NMp"/>
+                            <constraint firstItem="uea-sB-UpH" firstAttribute="leading" secondItem="B2S-KG-oQy" secondAttribute="leading" constant="120" id="8pS-2z-0ci"/>
+                            <constraint firstAttribute="trailing" secondItem="3RT-kQ-xo9" secondAttribute="trailing" constant="120" id="9Bo-ee-9Cm"/>
+                            <constraint firstItem="7Ha-wD-QaB" firstAttribute="width" secondItem="QBe-fx-6a6" secondAttribute="width" id="9Jb-n4-um5"/>
+                            <constraint firstItem="7Ha-wD-QaB" firstAttribute="top" secondItem="3RT-kQ-xo9" secondAttribute="bottom" constant="31" id="JNU-sR-dvL"/>
+                            <constraint firstItem="3RT-kQ-xo9" firstAttribute="top" secondItem="EiB-BT-Lqf" secondAttribute="bottom" constant="20" id="Jvn-ql-R51"/>
+                            <constraint firstItem="QBe-fx-6a6" firstAttribute="leading" secondItem="B2S-KG-oQy" secondAttribute="leading" constant="120" id="Ms3-FD-6qO"/>
+                            <constraint firstItem="19F-TL-erQ" firstAttribute="width" secondItem="QBe-fx-6a6" secondAttribute="width" id="SuE-XL-jam"/>
+                            <constraint firstItem="uea-sB-UpH" firstAttribute="height" secondItem="QBe-fx-6a6" secondAttribute="height" id="Wu4-SD-n1S"/>
+                            <constraint firstItem="EiB-BT-Lqf" firstAttribute="width" secondItem="QBe-fx-6a6" secondAttribute="width" id="ZcH-e6-Hle"/>
+                            <constraint firstItem="Weg-Z1-kia" firstAttribute="leading" secondItem="B2S-KG-oQy" secondAttribute="leading" constant="15" id="ama-Yq-oQH"/>
+                            <constraint firstItem="uea-sB-UpH" firstAttribute="top" secondItem="QBe-fx-6a6" secondAttribute="bottom" constant="20" id="e09-Ar-MV9"/>
+                            <constraint firstItem="19F-TL-erQ" firstAttribute="height" secondItem="QBe-fx-6a6" secondAttribute="height" id="e2Q-vW-74e"/>
+                            <constraint firstItem="QBe-fx-6a6" firstAttribute="top" secondItem="bqO-iq-wAK" secondAttribute="bottom" constant="100" id="eh8-A3-Qen"/>
+                            <constraint firstItem="3RT-kQ-xo9" firstAttribute="width" secondItem="QBe-fx-6a6" secondAttribute="width" id="lba-rv-qh1"/>
+                            <constraint firstItem="3RT-kQ-xo9" firstAttribute="height" secondItem="QBe-fx-6a6" secondAttribute="height" id="lkw-QU-ATs"/>
+                            <constraint firstItem="ue0-Fv-aUt" firstAttribute="top" secondItem="Weg-Z1-kia" secondAttribute="bottom" constant="20" id="lxN-74-kwR"/>
+                            <constraint firstAttribute="trailing" secondItem="EiB-BT-Lqf" secondAttribute="trailing" constant="120" id="mbf-yb-Z0M"/>
+                            <constraint firstItem="7Ha-wD-QaB" firstAttribute="height" secondItem="QBe-fx-6a6" secondAttribute="height" id="n32-3f-7Mh"/>
+                            <constraint firstItem="19F-TL-erQ" firstAttribute="leading" secondItem="B2S-KG-oQy" secondAttribute="leading" constant="120" id="pWy-FO-jpU"/>
+                            <constraint firstAttribute="trailing" secondItem="7Ha-wD-QaB" secondAttribute="trailing" constant="120" id="qOU-ng-LHH"/>
+                            <constraint firstAttribute="trailing" secondItem="Weg-Z1-kia" secondAttribute="trailing" constant="15" id="rfJ-7k-pxy"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="3w2-Sd-bjn"/>
+                                <exclude reference="Wu4-SD-n1S"/>
+                                <exclude reference="SuE-XL-jam"/>
+                                <exclude reference="e2Q-vW-74e"/>
+                                <exclude reference="6T0-wK-NMp"/>
+                                <exclude reference="ZcH-e6-Hle"/>
+                                <exclude reference="lba-rv-qh1"/>
+                                <exclude reference="lkw-QU-ATs"/>
+                                <exclude reference="9Jb-n4-um5"/>
+                                <exclude reference="n32-3f-7Mh"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="audioPostIcon" destination="7Ha-wD-QaB" id="9Lr-qF-PWu"/>
+                        <outlet property="chatPostIcon" destination="19F-TL-erQ" id="lfj-7Z-nB9"/>
+                        <outlet property="linkPostIcon" destination="3RT-kQ-xo9" id="Axy-vV-9HC"/>
+                        <outlet property="photoPostIcon" destination="EiB-BT-Lqf" id="ora-BE-0Hq"/>
+                        <outlet property="quotePostIcon" destination="uea-sB-UpH" id="RcM-aG-rmS"/>
+                        <outlet property="textPostIcon" destination="QBe-fx-6a6" id="wv5-Ca-JeM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Pt7-Tc-bJK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="vqN-zM-RXp" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="2307" y="315"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="UlC-7S-3ak">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="7k7-Y6-kM6" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="PET-t6-bCg">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="fa0-SJ-3xa" kind="relationship" relationship="rootViewController" id="Nln-aj-Wvl"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bxR-p0-Tbs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="820" y="315"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Audio" width="100" height="100"/>
+        <image name="Chat" width="100" height="100"/>
+        <image name="Link" width="100" height="100"/>
+        <image name="Photo" width="100" height="100"/>
+        <image name="Quote" width="100" height="100"/>
+        <image name="Text" width="100" height="100"/>
+    </resources>
+</document>
